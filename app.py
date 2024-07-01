@@ -20,7 +20,11 @@ GOOGLE_API_KEY = st.secrets["API_KEY"]
 #credentials = Credentials.from_service_account_file(
 #    'avian-serenity-427813-m3-70c98e1468ee.json')
 
-#client = texttospeech.TextToSpeechClient(credentials=credentials)
+credentials = service_account.Credentials.from_service_account_info(
+    st.secrets["client_ts]
+)
+
+client = texttospeech.TextToSpeechClient(credentials=credentials)
 
 # Set up Google Gemini-Pro AI model
 genai.configure(api_key=GOOGLE_API_KEY)
