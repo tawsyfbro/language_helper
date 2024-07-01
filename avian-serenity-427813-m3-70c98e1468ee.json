@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "avian-serenity-427813-m3",
+  "private_key_id": "70c98e1468ee97254b20b271a79243745583bae8",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDNc9L/DECus7Vq\nXF3PWDhrJUTRwSb5Rb/rmZHPOkhwlYtB8EEZcB9E7W/XZUwZTzHDbl3+l29EpYtx\nWyMsVKBgPT5djx0iI5zSCeTXD14/kW3M+RaWL4SIAjbXZbyb57nSEBbi2oGDgdZU\nDpBOF17mjhsEHLpPcGPmLJ9cJxDxTpwnNl9CcR2N5wueUN2MKLyaZow1v9Lw/v7d\neLnlJEevNL6YAtENjZb6ZJ7uerlGGClrJDtCpPAoFUNw2EMpgL0zxSO+yAFf/FnR\nwSRzeBP2DmBq79xmk9doLY2k/9yhbQHZSKO2Uiav5wPgx8FsZ96CA3oQltxahn5j\n/KYkx4TrAgMBAAECggEADZb+uu4ljSjH9Dwd3Gw6dyPk9HbxTAXIFx52XZ2+Uuwh\nZQAuXi9jchy+jCHgMcBiS0oOn5uGuaS1n47mubTzUspaSLgBtlNiuSX8ZBlZI51M\nBQXo75A/FPwIgqDxI+LlELcNvH21mWxKMA8yjmfPWDLIKLJ5xG1rvjrvY5oV7dAl\n/jCU4quuDpyBGGcxFGk60///Il1fMace+VsLkFmplkLVWkveBix1k2esVaxjd7aY\n4Mr1AGmJ8Rs430UAs5+Bbq3rvYeOk866XT9kLHaaCi+As1mgKhalR3ImtfZjdij9\n1dz4fFDngYSEe5SxI4tYU6VclTDonWYS6A9V7KOlYQKBgQDoy+GDhs9LjT+D8cBd\n1EUIB80hMeL8AmAsWfYLJuUSjWpLvYJAktVanG2t6w9dFDc8URIQOfWRmIMTB7EC\nwsQBPWxj2y3Gr5uDvQj07JvnXVbjy0Zg4IW5Iwa36zI2n4AUdZcMN0JfFbWe3iP0\nPdG9f2LQknsboWayR6rBVRc8kQKBgQDh7jlz5pcWqlfS+UJIWVNNvuZ50PyyI89E\n0IQayfw+aHQxeQy9eexlPZaUkrOEHAZU5WeDea7RJZ48yHllzgLE7Xe6bfLsIBc+\nm7tZhd6Q0vihXTTwLC+UjOCNFRhi1JqqQNz53Ryp/cHINzASYSrVxpZ9woXxmhR/\n+1p1JClXuwKBgQDehDr70HkGe23RvdulFEgjo+lUKG4RemfZHOhMwpHFSPzohq0g\n8fkTkmBYFE3sJ22grtE4R15OG9x17S0qOWbG1KJtVEyOFL7ujlsoWZ2v6g0q0dtk\nsFfBnhRG6n5lrdHsPHXzzEIZxxOCVk1BoXGA02ltegZIY99Y254BDEeYsQKBgGW6\ng0oJiPxepP7M1yiGd/jovRQaor1/XENq9CCv1BExrSfdjnv+Ww/W5Gdvir8wczVk\nufA8KRfpLU/HIMpTMXIETsW13gyuAmlha8FKgsWJCQR3WG/QJXho2m8MEZfmjOGe\nJSGoitCL/uYs20tbTxNEwNxNa0w3CYX64mceajMjAoGAWl8WrY9V43dIVoF71Qii\nGDrWiQVh02/+5VJNW4IcG13zSJXksizoH8x2ZQqiLTjBvNgJlEj+i+vv+8pLf382\n2GzVSjkIMvrVOvz2bxJ70Gz7YctDDBVX6tDp8SOLsmKGh6uLsU7TBhnJVtpJFbxt\nWp3JtjrF2T67vvVn7C7TsrQ=\n-----END PRIVATE KEY-----\n",
+  "client_email": "speech-to-text-tryout@avian-serenity-427813-m3.iam.gserviceaccount.com",
+  "client_id": "109083011926773368252",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/speech-to-text-tryout%40avian-serenity-427813-m3.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
