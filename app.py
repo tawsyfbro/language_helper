@@ -21,7 +21,7 @@ GOOGLE_API_KEY = st.secrets["API_KEY"]
 #    'avian-serenity-427813-m3-70c98e1468ee.json')
 
 credentials = service_account.Credentials.from_service_account_info(
-    st.secrets["client_ts]
+    st.secrets["client_ts"]
 )
 
 client = texttospeech.TextToSpeechClient(credentials=credentials)
