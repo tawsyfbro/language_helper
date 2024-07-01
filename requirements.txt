@@ -1,0 +1,13 @@
+streamlit
+streamlit-option-menu
+Pillow
+gTTS
+google-generativeai
+streamlit-mic-recorder
+google-cloud-texttospeech
+google-auth
+torch
+torchvision
+torchaudio
+ffmpeg-python
+openai-whisper
