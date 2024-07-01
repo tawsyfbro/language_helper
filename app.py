@@ -81,7 +81,7 @@ def roleForStreamlit(user_role):
 
 def transcribe_audio():
 
-    command = ["whisper", f"G:\\chat_bot\\mic_rec.mp3",
+    command = ["whisper", "mic_rec.mp3",
                "--language", "English", "--fp16", "False"]
 
     try:
