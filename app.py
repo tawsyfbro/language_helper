@@ -63,20 +63,20 @@ def audio_to_text(audio_file):
 
 # Set page title and icon
 st.set_page_config(
-    page_title="Medical Chatbot",
+    page_title="SpeakSpark",
     page_icon="🧠",
     layout="centered",
     initial_sidebar_state="expanded"
 )
 
-with st.sidebar:
-    user_picked = option_menu(
-        "Google Gemini AI",
-        ["ChatBot", "Image Captioning"],
-        menu_icon="robot",
-        icons=["chat-dots-fill", "image-fill"],
-        default_index=0
-    )
+# with st.sidebar:
+#     user_picked = option_menu(
+#         "Language Bot",
+#         ["ChatBot", "Image Captioning"],
+#         menu_icon="robot",
+#         icons=["chat-dots-fill", "image-fill"],
+#         default_index=0
+#     )
 
 
 def roleForStreamlit(user_role):
@@ -157,69 +157,69 @@ def roleForStreamlit(user_role):
 
 i = 0
 
-if user_picked == 'ChatBot':
-    model = gemini_1_5_flash()
 
-    if "chat_history" not in st.session_state:
-        st.session_state['chat_history'] = model.start_chat(history=[
-            {
-                "role": "model",
-                "parts": [{"text": system_prompt}]
-            }
-        ])
+model = gemini_1_5_flash()
 
-    st.title("🤖TalkBot")
+if "chat_history" not in st.session_state:
+    st.session_state['chat_history'] = model.start_chat(history=[
+        {
+            "role": "model",
+            "parts": [{"text": system_prompt}]
+        }
+    ])
 
-    # Display the chat history if it's not empty
-    if st.session_state.chat_history.history:
-        for message in st.session_state.chat_history.history:
-            with st.chat_message(roleForStreamlit(message.role)):
+st.title("SpeakSpark")
 
-                if i == 0:
-                    i += 1
-                else:
-                    st.markdown(message.parts[0].text)
+# Display the chat history if it's not empty
+if st.session_state.chat_history.history:
+    for message in st.session_state.chat_history.history:
+        with st.chat_message(roleForStreamlit(message.role)):
 
-                print(message.parts[0].text)
+            if i == 0:
+                i += 1
+            else:
+                st.markdown(message.parts[0].text)
 
-    # Record audio input
-    audio_data = mic_recorder()
-    if audio_data:
-        # Convert audio to text
-        # user_input = audio_to_text(audio_data)
+            print(message.parts[0].text)
 
-        user_input = get_user_input(audio_data)
+# Record audio input
+audio_data = mic_recorder()
+if audio_data:
+    # Convert audio to text
+    # user_input = audio_to_text(audio_data)
 
-        # user_input = 'user_input'
-        # Continue the chat with transcribed text
-        st.chat_message("user").markdown(f'{user_input}')
-        response = st.session_state.chat_history.send_message(user_input)
+    user_input = get_user_input(audio_data)
 
-        # Convert response text to audio and play it
-        # audio_file = text_to_audio(response.text)
+    # user_input = 'user_input'
+    # Continue the chat with transcribed text
+    st.chat_message("user").markdown(f'{user_input}')
+    response = st.session_state.chat_history.send_message(user_input)
 
-        synthesis_input = texttospeech.SynthesisInput(text=response.text)
+    # Convert response text to audio and play it
+    # audio_file = text_to_audio(response.text)
 
-        voice = texttospeech.VoiceSelectionParams(
-            language_code="en-US",
-            name='en-US-Wavenet-F'
-        )
+    synthesis_input = texttospeech.SynthesisInput(text=response.text)
 
-        # en-US-Journey-F
-        # en-US-Wavenet-F
+    voice = texttospeech.VoiceSelectionParams(
+        language_code="en-US",
+        name='en-US-Wavenet-F'
+    )
 
-        audio_config = texttospeech.AudioConfig(
-            audio_encoding=texttospeech.AudioEncoding.MP3,
+    # en-US-Journey-F
+    # en-US-Wavenet-F
 
-            speaking_rate=1,
-            pitch=1
-        )
+    audio_config = texttospeech.AudioConfig(
+        audio_encoding=texttospeech.AudioEncoding.MP3,
 
-        audio_response = client.synthesize_speech(
-            input=synthesis_input,
-            voice=voice,
-            audio_config=audio_config
-        )
+        speaking_rate=1,
+        pitch=1
+    )
 
-        # audio_bytes = open(audio_response.audio_content, "rb").read()
-        st.audio(audio_response.audio_content)
+    audio_response = client.synthesize_speech(
+        input=synthesis_input,
+        voice=voice,
+        audio_config=audio_config
+    )
+
+    # audio_bytes = open(audio_response.audio_content, "rb").read()
+    st.audio(audio_response.audio_content)
